@@ -10,8 +10,8 @@ body {
 
 .container {
     max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
+    margin: 10px auto;
+    padding: 10px;
     text-align: center;
 }
 
@@ -28,4 +28,25 @@ h2 {
 p {
     font-size: 1.2em;
     line-height: 1.6;
+}
+
+.circle {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    background-color: #ccc;
+    background-image: url('path/to/image.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.founders {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.founder {
+    margin: 0 20px;
+    text-align: center;
 }
