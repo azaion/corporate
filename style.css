@@ -34,8 +34,6 @@ p {
     border-radius: 50%;
     width: 150px;
     height: 150px;
-    background-color: #ccc;
-    background-image: url('path/to/image.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -49,4 +47,8 @@ p {
 .founder {
     margin: 0 20px;
     text-align: center;
+}
+
+.no-edit {
+    cursor: default;
 }
