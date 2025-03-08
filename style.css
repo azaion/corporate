@@ -53,3 +53,7 @@ p {
 .no-edit {
     cursor: default;
 }
+
+.founder-info {
+  min-height: 80px; /* Adjust the value as needed */
+}
