@@ -1,2 +1,5 @@
 .idea
 materials/
+.next
+node_modules
+next-env.d.ts
