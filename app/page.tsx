@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col bg-gray-500">
+    <div className="flex min-h-screen flex-col bg-gray-400">
       <header className="sticky top-0 z-40 w-full border-b bg-gray-300 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-16 items-center space-x-4 sm:justify-between  sm:space-x-0">
           <div className="flex gap-6 md:gap-10">
@@ -12,7 +12,7 @@ export default function Home() {
               <img
                 src="/logos/logo.svg"
                 alt="Azaion Logo"
-                className="h-16 w-auto"
+                className="h-20 pt-3 w-auto"
               />
             </Link>
           </div>
