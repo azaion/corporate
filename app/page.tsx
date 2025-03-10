@@ -4,16 +4,15 @@ import { Button } from "@/components/ui/button"
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col">
-      {/* Navigation */}
-      <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
+    <div className="flex min-h-screen flex-col bg-gray-500">
+      <header className="sticky top-0 z-40 w-full border-b bg-gray-300 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+        <div className="container flex h-16 items-center space-x-4 sm:justify-between  sm:space-x-0">
           <div className="flex gap-6 md:gap-10">
             <Link href="/" className="flex items-center space-x-2">
               <img
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo_3-b9JjUDKFxG8KVVFBxLjURGOjy1Xiwb.png"
+                src="/logos/logo.svg"
                 alt="Azaion Logo"
-                className="h-10 w-auto"
+                className="h-16 w-auto"
               />
             </Link>
           </div>
@@ -28,7 +27,6 @@ export default function Home() {
               <Link href="#contact" className="px-4 py-2 text-sm font-medium transition-colors hover:text-primary">
                 Contact
               </Link>
-              <Button>Get Started</Button>
             </nav>
           </div>
         </div>
@@ -36,7 +34,7 @@ export default function Home() {
 
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-black text-white">
+        <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-gray-700 text-white">
           <div className="container px-4 md:px-6">
             <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
               <div className="flex flex-col justify-center space-y-4">
@@ -79,12 +77,11 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Features Section */}
-        <section id="features" className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-900">
+        <section id="features" className="w-full py-12 md:py-24 lg:py-32 bg-gray-200 dark:bg-gray-900">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-gray-200 px-3 py-1 text-sm dark:bg-gray-800">
+                <div className="inline-block rounded-lg bg-gray-300 px-3 py-1 text-sm dark:bg-gray-800">
                 Key Capabilities
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Advanced UAV Intelligence</h2>
@@ -152,13 +149,13 @@ export default function Home() {
           </div>
         </section>
 
-        {/* About Section */}
-        <section id="about" className="w-full py-12 md:py-24 lg:py-32">
+
+        <section id="about" className="w-full py-12 md:py-24 bg-gray-300 lg:py-32">
           <div className="container px-4 md:px-6">
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12">
               <div className="flex flex-col justify-center space-y-4">
-                <div className="space-y-2">
-                  <div className="inline-block rounded-lg bg-gray-200 px-3 py-1 text-sm dark:bg-gray-800">
+                <div className="space-y-2 text-center"> {/* Added text-center class here */}
+                  <div className="inline-block rounded-lg bg-gray-400 px-3 py-1 text-sm dark:bg-gray-800">
                     Who We Are
                   </div>
                   <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
@@ -184,28 +181,26 @@ export default function Home() {
               </div>
               <div className="flex items-center justify-center">
                 <img
-                  src="/placeholder.svg?height=400&width=600"
-                  alt="Azaion Team"
-                  className="aspect-video overflow-hidden rounded-xl object-cover object-center"
-                  width={600}
-                  height={400}
+                    src="/placeholder.svg?height=400&width=600"
+                    alt="Azaion Team"
+                    className="aspect-video overflow-hidden rounded-xl object-cover object-center"
+                    width={600}
+                    height={400}
                 />
               </div>
             </div>
 
-            {/* Leadership Team */}
+            {/* Team */}
             <div className="mt-16">
               <div className="text-center mb-12">
-                <h3 className="text-2xl font-bold">Our Leadership Team</h3>
-                <p className="text-gray-500 mt-2">Meet the experts behind Azaion's innovative technology</p>
+                <h3 className="text-2xl font-bold">Our Team</h3>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {/* CEO */}
                 <div className="flex flex-col items-center text-center">
                   <div className="relative w-48 h-48 mb-4 overflow-hidden rounded-full">
                     <img
-                      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/DenysP.jpg-OZwyrFQqI9dCrP6uscKhhjvlfaIbRZ.webp"
+                      src="/images/DenysP.jpg"
                       alt="Denys P."
                       className="object-cover w-full h-full"
                     />
@@ -214,11 +209,10 @@ export default function Home() {
                   <p className="text-primary font-medium">CEO</p>
                 </div>
 
-                {/* CTO */}
                 <div className="flex flex-col items-center text-center">
                   <div className="relative w-48 h-48 mb-4 overflow-hidden rounded-full">
                     <img
-                      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Alex_B.jpg-5MbUKPta2ejY78YYmZToMfjO9ufnSP.webp"
+                      src="/images/Alex_B.jpg"
                       alt="Alexander B."
                       className="object-cover w-full h-full"
                     />
@@ -227,11 +221,10 @@ export default function Home() {
                   <p className="text-primary font-medium">CTO</p>
                 </div>
 
-                {/* COO */}
                 <div className="flex flex-col items-center text-center">
                   <div className="relative w-48 h-48 mb-4 overflow-hidden rounded-full">
                     <img
-                      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/DenysZ.jpg-sK94tHFNsAjHWvTQkpehReSXZU8UlW.webp"
+                      src="/images/DenysZ.jpg"
                       alt="Denys Z."
                       className="object-cover w-full h-full"
                     />
@@ -240,11 +233,10 @@ export default function Home() {
                   <p className="text-primary font-medium">COO</p>
                 </div>
 
-                {/* Chief RnD */}
                 <div className="flex flex-col items-center text-center">
                   <div className="relative w-48 h-48 mb-4 overflow-hidden rounded-full">
                     <img
-                      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Pentti.jpg-oun78pna6nFGqafNwfc88zm4iQtb9z.webp"
+                      src="/images/Pentti.jpg"
                       alt="Pentti"
                       className="object-cover w-full h-full"
                     />
@@ -253,11 +245,10 @@ export default function Home() {
                   <p className="text-primary font-medium">Chief RnD</p>
                 </div>
 
-                {/* AI Training and Tuneup */}
                 <div className="flex flex-col items-center text-center">
                   <div className="relative w-48 h-48 mb-4 overflow-hidden rounded-full">
                     <img
-                      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/AndriiS.jpg-1cCyAuvaqrCKIk2N6vFTWOdv3JZtJt.webp"
+                      src="/images/AndriiS.jpg"
                       alt="Andrii S."
                       className="object-cover w-full h-full"
                     />
@@ -270,12 +261,12 @@ export default function Home() {
                 <div className="flex flex-col items-center text-center">
                   <div className="relative w-48 h-48 mb-4 overflow-hidden rounded-full">
                     <img
-                      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Gemini.jpg-XgMcvFX1O0ZNud0f7U96eVlXxQ3gku.webp"
-                      alt="Gemini"
+                      src="/images/Jasmine.jpg"
+                      alt="Jasmine"
                       className="object-cover w-full h-full"
                     />
                   </div>
-                  <h4 className="text-xl font-bold">Gemini</h4>
+                  <h4 className="text-xl font-bold">Jasmine</h4>
                   <p className="text-primary font-medium">Head of Embedded</p>
                 </div>
               </div>
@@ -283,8 +274,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-primary text-primary-foreground">
+        <section id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-blue-500 text-primary-foreground">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
