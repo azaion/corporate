@@ -296,8 +296,8 @@ export default function Home() {
       {/* Footer */}
       <footer className="w-full border-t py-6 md:py-0">
         <div className="container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
-          <p className="text-center text-sm leading-loose text-gray-500 md:text-left">
-            © 2025 Azaion. All rights reserved.
+          <p className="leading-loose md:text-center text-gray-500 p-4 gap-4">
+          © 2025 Azaion. All rights reserved.
           </p>
           <div className="flex items-center gap-4">
           </div>
