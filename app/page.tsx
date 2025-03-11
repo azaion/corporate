@@ -261,12 +261,12 @@ export default function Home() {
                 <div className="flex flex-col items-center text-center">
                   <div className="relative w-48 h-48 mb-4 overflow-hidden rounded-full">
                     <img
-                      src="/images/Jasmine.jpg"
-                      alt="Jasmine"
+                      src="/images/Jaakko.jpg"
+                      alt="Jaakko"
                       className="object-cover w-full h-full"
                     />
                   </div>
-                  <h4 className="text-xl font-bold">Jasmine</h4>
+                  <h4 className="text-xl font-bold">Jaakko</h4>
                   <p className="text-primary font-medium">Head of Embedded</p>
                 </div>
               </div>
