@@ -300,15 +300,6 @@ export default function Home() {
             © 2025 Azaion. All rights reserved.
           </p>
           <div className="flex items-center gap-4">
-            <Link href="#" className="text-sm text-gray-500 hover:text-gray-900 dark:hover:text-gray-50">
-              Privacy Policy
-            </Link>
-            <Link href="#" className="text-sm text-gray-500 hover:text-gray-900 dark:hover:text-gray-50">
-              Terms of Service
-            </Link>
-            <Link href="#" className="text-sm text-gray-500 hover:text-gray-900 dark:hover:text-gray-50">
-              Contact
-            </Link>
           </div>
         </div>
       </footer>
