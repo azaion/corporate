@@ -34,9 +34,9 @@ export default function Home() {
 
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-gray-700 text-white">
+        <section className="w-full py-12 xl:py-44 bg-gray-700 text-white">
           <div className="container px-4 md:px-6">
-            <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
+            <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_750px]">
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
                   <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
@@ -46,7 +46,7 @@ export default function Home() {
                     Revolutionizing unmanned flight with intelligent systems for fully autonomous operations.
                   </p>
                 </div>
-                <div className="flex flex-col gap-2 min-[400px]:flex-row">
+                <div className="flex flex-col gap-2 min-[500px]:flex-row">
                   <Link href="#contact">
                     <Button
                         className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50">
@@ -61,17 +61,17 @@ export default function Home() {
                   </Link>
                 </div>
               </div>
-              <div className="flex items-center justify-center">
-                <iframe
-                    width={720}
-                    height={480}
-                    src="https://www.youtube.com/embed/KA2Dpm8-10A"
+              <div className="w-full max-w-[720px] lg:max-w-[960px] xl:max-w-[1080px] mx-auto px-4">
+                <div className="relative w-full pt-[60%]">
+                  <iframe
+                    className="absolute top-0 left-0 w-full h-full rounded-xl"
+                    src="https://www.youtube.com/embed/KA2Dpm8-10A?vq=hd1080"
                     title="Azaion AI Detection Video"
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowFullScreen
-                    className="aspect-video overflow-hidden rounded-xl"
-                ></iframe>
+                  ></iframe>
+                </div>
               </div>
             </div>
           </div>
@@ -302,4 +302,3 @@ export default function Home() {
     </div>
   )
 }
-
