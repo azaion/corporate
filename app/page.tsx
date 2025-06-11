@@ -274,6 +274,96 @@ export default function Home() {
           </div>
         </section>
 
+{/* Our Users Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Users</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Trusted by elite Ukrainian military units in their critical operations
+            </p>
+          </div>
+
+          {/* Military Units Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+            <div className="flex flex-col items-center text-center p-6">
+              <div className="w-24 h-24 mb-4 flex items-center justify-center">
+                <Image
+                  src="/images/3sso.jpeg"
+                  alt="3rd Separate Special Purpose Regiment"
+                  width={96}
+                  height={96}
+                  className="object-contain"
+                />
+              </div>
+              <h3 className="font-semibold text-gray-900 text-sm leading-tight">
+                3rd Separate Special Purpose Regiment
+              </h3>
+            </div>
+
+            <div className="flex flex-col items-center text-center p-6">
+              <div className="w-24 h-24 mb-4 flex items-center justify-center">
+                <Image
+                  src="/images/15th-brigade.png"
+                  alt="15th Operational Brigade"
+                  width={96}
+                  height={96}
+                  className="object-contain"
+                />
+              </div>
+              <h3 className="font-semibold text-gray-900 text-sm leading-tight">15th Operational Brigade</h3>
+            </div>
+
+            <div className="flex flex-col items-center text-center p-6">
+              <div className="w-24 h-24 mb-4 flex items-center justify-center">
+                <Image
+                  src="/images/38-marine-brigade.png"
+                  alt="38 Ukrainian Marine Brigade"
+                  width={96}
+                  height={96}
+                  className="object-contain"
+                />
+              </div>
+              <h3 className="font-semibold text-gray-900 text-sm leading-tight">38 Ukrainian Marine Brigade</h3>
+            </div>
+
+            <div className="flex flex-col items-center text-center p-6">
+              <div className="w-24 h-24 mb-4 flex items-center justify-center">
+                <Image
+                  src="/images/k2.png"
+                  alt="20th Separate Regiment of K-2 Unmanned Systems"
+                  width={96}
+                  height={96}
+                  className="object-contain"
+                />
+              </div>
+              <h3 className="font-semibold text-gray-900 text-sm leading-tight">
+                20th Separate Regiment of K-2 Unmanned Systems
+              </h3>
+            </div>
+          </div>
+
+          {/* Featured Video Section */}
+          <div className="text-center">
+            <h3 className="text-2xl font-bold text-gray-900 mb-2">Featured by CSIS</h3>
+            <div className="max-w-4xl mx-auto">
+              <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg">
+                <iframe
+                  src="https://www.youtube.com/embed/WvSY973xWig?si=RnZ1alkvf_VSbzvb"
+                  title="Featured by CSIS"
+                  className="absolute inset-0 w-full h-full"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+
         <section id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-blue-500 text-primary-foreground">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
