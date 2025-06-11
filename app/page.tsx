@@ -25,6 +25,10 @@ export default function Home() {
               <Link href="#about" className="px-4 py-2 text-sm font-medium transition-colors hover:text-primary">
                 About
               </Link>
+              <Link href="#users" className="px-4 py-2 text-sm font-medium transition-colors hover:text-primary">
+                Our Users
+              </Link>
+
               <Link href="#contact" className="px-4 py-2 text-sm font-medium transition-colors hover:text-primary">
                 Contact
               </Link>
@@ -276,7 +280,8 @@ export default function Home() {
         </section>
 
 {/* Our Users Section */}
-      <section className="py-20 bg-white">
+
+      <section id="users" className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Users</h2>
