@@ -295,7 +295,7 @@ export default function Home() {
             <div className="flex flex-col items-center text-center p-6">
               <div className="w-24 h-24 mb-4 flex items-center justify-center">
                 <Image
-                  src="/images/3sso.jpeg"
+                  src="/images/3SSO.jpeg"
                   alt="3rd Separate Special Purpose Regiment"
                   width={96}
                   height={96}
@@ -336,7 +336,7 @@ export default function Home() {
             <div className="flex flex-col items-center text-center p-6">
               <div className="w-24 h-24 mb-4 flex items-center justify-center">
                 <Image
-                  src="/images/k2.png"
+                  src="/images/K2.png"
                   alt="20th Separate Regiment of K-2 Unmanned Systems"
                   width={96}
                   height={96}
