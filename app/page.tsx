@@ -1,7 +1,8 @@
-import { ArrowRight, Cpu, Globe, Lock, TargetIcon, Zap } from "lucide-react"
+import { ArrowRight, Cpu, BrainCircuit, PenTool, Database, Maximize, ZoomIn, ListChecks, SunMoon, RefreshCcw, Fingerprint, ShieldCheck, Network } from "lucide-react"
 import Link from "next/link"
 import Image from 'next/image'
 import { Button } from "@/components/ui/button"
+import YouTubePreview from "@/components/YouTubePreview"
 
 export default function Home() {
   return (
@@ -9,27 +10,30 @@ export default function Home() {
       <header className="sticky top-0 z-40 w-full border-b bg-gray-300 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-16 items-center space-x-4 sm:justify-between  sm:space-x-0">
           <div className="flex gap-6 md:gap-10">
-            <Link href="/" className="flex items-center space-x-2">
+            <Link href="/" className="flex items-center space-x-3">
               <img
                 src="/logos/logo.svg"
                 alt="Azaion Logo"
                 className="h-20 pt-3 w-auto"
               />
+              <span className="whitespace-nowrap text-base md:text-lg lg:text-xl font-semibold tracking-wide text-gray-900 antialiased">
+                Azaion Ukraine Ltd.
+              </span>
             </Link>
           </div>
           <div className="flex flex-1 items-center justify-end space-x-4">
             <nav className="flex items-center space-x-1">
-              <Link href="#features" className="px-4 py-2 text-sm font-medium transition-colors hover:text-primary">
+              <Link href="/#features" className="px-4 py-2 text-sm font-medium transition-colors hover:text-primary">
                 Features
               </Link>
-              <Link href="#about" className="px-4 py-2 text-sm font-medium transition-colors hover:text-primary">
+              <Link href="/#about" className="px-4 py-2 text-sm font-medium transition-colors hover:text-primary">
                 About
               </Link>
-              <Link href="#users" className="px-4 py-2 text-sm font-medium transition-colors hover:text-primary">
+              <Link href="/#users" className="px-4 py-2 text-sm font-medium transition-colors hover:text-primary">
                 Our Users
               </Link>
 
-              <Link href="#contact" className="px-4 py-2 text-sm font-medium transition-colors hover:text-primary">
+              <Link href="/#contact" className="px-4 py-2 text-sm font-medium transition-colors hover:text-primary">
                 Contact
               </Link>
             </nav>
@@ -52,14 +56,14 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="flex flex-col gap-2 min-[500px]:flex-row">
-                  <Link href="#contact">
+                  <Link href="/#contact">
                     <Button
                         className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50">
                       Request Demo
                       <ArrowRight className="ml-2 h-4 w-4"/>
                     </Button>
                   </Link>
-                  <Link href="#features">
+                  <Link href="/#features">
                     <Button variant="outline" className="bg-transparent text-white border-white hover:bg-white/10">
                       Learn More
                     </Button>
@@ -67,16 +71,25 @@ export default function Home() {
                 </div>
               </div>
               <div className="w-full max-w-[720px] lg:max-w-[960px] xl:max-w-[1080px] mx-auto px-4">
-                <div className="relative w-full pt-[60%]">
-                  <iframe
-                    className="absolute top-0 left-0 w-full h-full rounded-xl"
-                    src="https://www.youtube.com/embed/KA2Dpm8-10A?vq=hd1080"
-                    title="Azaion AI Detection Video"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowFullScreen
-                  ></iframe>
-                </div>
+                <YouTubePreview
+                  videoId="KA2Dpm8-10A"
+                  title="Azaion AI Detection Video"
+                  posterSrc="/images/azaion-orange.png"
+                  className="rounded-xl"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Partners Section */}
+        <section className="w-full py-4 bg-gray-600 text-white">
+          <div className="container px-4">
+            <div className="mx-auto max-w-3xl flex items-center justify-center gap-6">
+              <span className="text-base md:text-lg font-semibold whitespace-nowrap">We partner with:</span>
+              <div className="flex items-center gap-6">
+                <Image src="/images/brave1.png" alt="Brave1" width={120} height={40} className="h-8 w-auto object-contain" />
+                <Image src="/images/iron.png" alt="IRON" width={120} height={40} className="h-8 w-auto object-contain" />
               </div>
             </div>
           </div>
@@ -98,56 +111,110 @@ export default function Home() {
             <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 mt-12">
               <div className="flex flex-col items-center space-y-2 rounded-lg border p-6 shadow-sm">
                 <div className="rounded-full bg-primary/10 p-3">
-                  <Zap className="h-6 w-6 text-primary" />
+                  <BrainCircuit className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="text-xl font-bold">Fully Autonomous Operations</h3>
+                <h3 className="text-xl font-bold">AI Object Recognition</h3>
                 <p className="text-center text-gray-500 dark:text-gray-400">
-                  Self-sufficient UAV systems that operate independently with minimal human intervention.
+                  Real-time detection and classification in still images, video files, and live streams.
                 </p>
               </div>
               <div className="flex flex-col items-center space-y-2 rounded-lg border p-6 shadow-sm">
                 <div className="rounded-full bg-primary/10 p-3">
-                  <Globe className="h-6 w-6 text-primary" />
+                  <PenTool className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="text-xl font-bold">GPS Denied Solution</h3>
+                <h3 className="text-xl font-bold">Built-in AI Annotation</h3>
                 <p className="text-center text-gray-500 dark:text-gray-400">
-                  Advanced navigation capabilities that function reliably in environments without GPS signals.
+                  Native labeling tools for images and video to accelerate ground-truth creation.
                 </p>
               </div>
               <div className="flex flex-col items-center space-y-2 rounded-lg border p-6 shadow-sm">
                 <div className="rounded-full bg-primary/10 p-3">
-                  <TargetIcon className="h-6 w-6 text-primary" />
+                  <Database className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="text-xl font-bold">AI Targeting</h3>
+                <h3 className="text-xl font-bold">Dataset Explorer</h3>
                 <p className="text-center text-gray-500 dark:text-gray-400">
-                  Precision targeting systems powered by sophisticated artificial intelligence algorithms.
+                  Inspect, filter, and refine datasets on the fly to improve model quality.
+                </p>
+              </div>
+              <div className="flex flex-col items-center space-y-2 rounded-lg border p-6 shadow-sm">
+                <div className="rounded-full bg-primary/10 p-3">
+                  <Maximize className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="text-xl font-bold text-center">Large Image Support (8000×8000)</h3>
+                <p className="text-center text-gray-500 dark:text-gray-400">
+                  Process ultra‑high‑resolution imagery end to end without compromise.
+                </p>
+              </div>
+              <div className="flex flex-col items-center space-y-2 rounded-lg border p-6 shadow-sm">
+                <div className="rounded-full bg-primary/10 p-3">
+                  <ZoomIn className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="text-xl font-bold">Zoom & Inspect</h3>
+                <p className="text-center text-gray-500 dark:text-gray-400">
+                  Smooth zoom in/out during annotation and recognition for pixel‑level review.
+                </p>
+              </div>
+              <div className="flex flex-col items-center space-y-2 rounded-lg border p-6 shadow-sm">
+                <div className="rounded-full bg-primary/10 p-3">
+                  <ListChecks className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="text-xl font-bold">17+ Object Classes</h3>
+                <p className="text-center text-gray-500 dark:text-gray-400">
+                  Ships with 17 classes today and scales to unlimited custom categories.
+                </p>
+              </div>
+              <div className="flex flex-col items-center space-y-2 rounded-lg border p-6 shadow-sm">
+                <div className="rounded-full bg-primary/10 p-3">
+                  <SunMoon className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="text-xl font-bold">Day/Night/Winter Modes</h3>
+                <p className="text-center text-gray-500 dark:text-gray-400">
+                  Robust performance across diurnal and seasonal conditions.
+                </p>
+              </div>
+              <div className="flex flex-col items-center space-y-2 rounded-lg border p-6 shadow-sm">
+                <div className="rounded-full bg-primary/10 p-3">
+                  <RefreshCcw className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="text-xl font-bold">Automated Re‑training</h3>
+                <p className="text-center text-gray-500 dark:text-gray-400">
+                  Closed‑loop training pipeline that continuously improves with new data.
+                </p>
+              </div>
+              <div className="flex flex-col items-center space-y-2 rounded-lg border p-6 shadow-sm">
+                <div className="rounded-full bg-primary/10 p-3">
+                  <Fingerprint className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="text-xl font-bold text-center">Hardware Fingerprint Licensing</h3>
+                <p className="text-center text-gray-500 dark:text-gray-400">
+                  Secure, device‑bound installations via hardware fingerprinting.
+                </p>
+              </div>
+              <div className="flex flex-col items-center space-y-2 rounded-lg border p-6 shadow-sm">
+                <div className="rounded-full bg-primary/10 p-3">
+                  <ShieldCheck className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="text-xl font-bold">Military‑grade Encryption</h3>
+                <p className="text-center text-gray-500 dark:text-gray-400">
+                  End‑to‑end protection for data at rest and in transit.
                 </p>
               </div>
               <div className="flex flex-col items-center space-y-2 rounded-lg border p-6 shadow-sm">
                 <div className="rounded-full bg-primary/10 p-3">
                   <Cpu className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="text-xl font-bold">Continuous AI Learning</h3>
+                <h3 className="text-xl font-bold">CPU Fallback</h3>
                 <p className="text-center text-gray-500 dark:text-gray-400">
-                  Full AI cycle with continuous model training using the latest operational data.
+                  Automatically switches to optimized CPU inference when no GPU is detected.
                 </p>
               </div>
               <div className="flex flex-col items-center space-y-2 rounded-lg border p-6 shadow-sm">
                 <div className="rounded-full bg-primary/10 p-3">
-                  <Lock className="h-6 w-6 text-primary" />
+                  <Network className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="text-xl font-bold">Secure Remote Operations</h3>
+                <h3 className="text-xl font-bold">Delta/NATO API Integration</h3>
                 <p className="text-center text-gray-500 dark:text-gray-400">
-                  Remotely operated task-based systems with enterprise-grade security protocols.
-                </p>
-              </div>
-              <div className="flex flex-col items-center space-y-2 rounded-lg border p-6 shadow-sm">
-                <div className="rounded-full bg-primary/10 p-3">
-                  <ArrowRight className="h-6 w-6 text-primary" />
-                </div>
-                <h3 className="text-xl font-bold">Adaptive Intelligence</h3>
-                <p className="text-center text-gray-500 dark:text-gray-400">
-                  Systems that adapt to changing conditions and requirements in real-time.
+                  Standards‑based API for interoperability with Delta and NATO systems.
                 </p>
               </div>
             </div>
@@ -161,37 +228,42 @@ export default function Home() {
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2 text-center"> {/* Added text-center class here */}
                   <div className="inline-block rounded-lg bg-gray-400 px-3 py-1 text-sm dark:bg-gray-800">
-                    Who We Are
+                    How It All Started
                   </div>
-                  <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
-                    Pioneering the Future of Unmanned Systems
+                  <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl whitespace-nowrap">
+                    From Battlefield Needs to Breakthrough AI
                   </h2>
                   <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                    Azaion is at the forefront of AI-driven UAV development. We create intelligent unmanned systems that
-                    push the boundaries of possibility.
+                    We began at the outset of the war as a small medical volunteer team. The relationships we built with
+                    active-duty units soon revealed where we could deliver the greatest impact: technology.
                   </p>
                 </div>
                 <div className="space-y-2">
-                  <p className="text-gray-500 dark:text-gray-400">
-                    Our team combines expertise in artificial intelligence, robotics, and aerospace engineering to
-                    develop next-generation unmanned aerial vehicles that operate with unprecedented autonomy and
-                    intelligence.
+                  <p className="text-gray-500 dark:text-gray-400 text-justify">
+                    With direct access to frontline feedback, we pivoted to our core strength—IT and AI. We formed a
+                    three-person strike team, built a secure operational framework, and started training a dataset on
+                    real, time-stamped imagery and materials provided by our friends in uniform. The mission: deliver
+                    tools that reduce risk and accelerate decision-making in the field.
                   </p>
-                  <p className="text-gray-500 dark:text-gray-400">
-                    With a focus on continuous innovation and practical applications, we're transforming how industries
-                    approach unmanned operations across defense, surveillance, logistics, and emergency response
-                    sectors.
+                  <p className="text-gray-500 dark:text-gray-400 text-justify">
+                    The smart core of our solution is a modular architecture that continuously learns from every
+                    verified photo and report. Models are updated through a secure, incremental training pipeline,
+                    enabling rapid adaptation without full retrains or downtime.
+                  </p>
+                  <p className="text-gray-500 dark:text-gray-400 text-justify">
+                    Every sample passes multi-stage validation—source verification, cross-sensor checks, human-in-the-loop
+                    review, and automated anomaly detection—so the dataset stays clean, balanced, and operationally
+                    relevant. This is how we keep “real data” truly real.
                   </p>
                 </div>
               </div>
               <div className="flex items-center justify-center">
-                <img
-                    src="/images/drone.webp"
-                    alt="cool drone"
-                    className="aspect-video overflow-hidden rounded-xl object-cover object-center"
-                    width={600}
-                    height={400}
-                />
+                <div className="grid grid-cols-2 gap-4 w-full max-w-[600px]">
+                  <img src="/images/medical.jpg" alt="Medical volunteering 1" className="w-full h-40 sm:h-44 md:h-48 lg:h-56 xl:h-64 object-cover rounded-xl" />
+                  <img src="/images/medical2.png" alt="Medical volunteering 2" className="w-full h-40 sm:h-44 md:h-48 lg:h-56 xl:h-64 object-cover rounded-xl" />
+                  <img src="/images/starlink.jpg" alt="Starlink field setup" className="w-full h-40 sm:h-44 md:h-48 lg:h-56 xl:h-64 object-cover rounded-xl" />
+                  <img src="/images/stuff4m.jpeg" alt="Supplies for the mission" className="w-full h-40 sm:h-44 md:h-48 lg:h-56 xl:h-64 object-cover rounded-xl" />
+                </div>
               </div>
             </div>
 
@@ -353,13 +425,11 @@ export default function Home() {
           <div className="text-center">
             <h3 className="text-2xl font-bold text-gray-900 mb-2">Featured by CSIS</h3>
             <div className="max-w-4xl mx-auto">
-              <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg">
-                <iframe
-                  src="https://www.youtube.com/embed/WvSY973xWig?si=RnZ1alkvf_VSbzvb"
+              <div className="relative rounded-lg overflow-hidden shadow-lg">
+                <YouTubePreview
+                  videoId="WvSY973xWig"
                   title="Featured by CSIS"
-                  className="absolute inset-0 w-full h-full"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
+                  posterSrc="/images/csis-stopframe.png"
                 />
               </div>
             </div>
