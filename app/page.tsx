@@ -8,32 +8,32 @@ export default function Home() {
   return (
     <div className="flex min-h-screen flex-col bg-gray-400">
       <header className="sticky top-0 z-40 w-full border-b bg-gray-300 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-16 items-center space-x-4 sm:justify-between  sm:space-x-0">
+        <div className="container flex items-center justify-between h-auto min-h-16 py-2 gap-2 sm:gap-4">
           <div className="flex gap-6 md:gap-10">
             <Link href="/" className="flex items-center space-x-3">
               <img
                 src="/logos/logo.svg"
                 alt="Azaion Logo"
-                className="h-20 pt-3 w-auto"
+                className="h-10 md:h-14 w-auto"
               />
-              <span className="whitespace-nowrap text-base md:text-lg lg:text-xl font-semibold tracking-wide text-gray-900 antialiased">
+              <span className="text-base md:text-lg lg:text-xl font-semibold tracking-wide text-gray-900 antialiased">
                 Azaion Ukraine Ltd.
               </span>
             </Link>
           </div>
           <div className="flex flex-1 items-center justify-end space-x-4">
-            <nav className="flex items-center space-x-1">
-              <Link href="/#features" className="px-4 py-2 text-sm font-medium transition-colors hover:text-primary">
+            <nav className="flex flex-wrap items-center justify-end gap-x-1 gap-y-1">
+              <Link href="/#features" className="px-2 sm:px-3 md:px-4 py-2 text-sm font-medium transition-colors hover:text-primary">
                 Features
               </Link>
-              <Link href="/#about" className="px-4 py-2 text-sm font-medium transition-colors hover:text-primary">
+              <Link href="/#about" className="px-2 sm:px-3 md:px-4 py-2 text-sm font-medium transition-colors hover:text-primary">
                 About
               </Link>
-              <Link href="/#users" className="px-4 py-2 text-sm font-medium transition-colors hover:text-primary">
+              <Link href="/#users" className="px-2 sm:px-3 md:px-4 py-2 text-sm font-medium transition-colors hover:text-primary">
                 Our Users
               </Link>
 
-              <Link href="/#contact" className="px-4 py-2 text-sm font-medium transition-colors hover:text-primary">
+              <Link href="/#contact" className="px-2 sm:px-3 md:px-4 py-2 text-sm font-medium transition-colors hover:text-primary">
                 Contact
               </Link>
             </nav>
@@ -85,8 +85,8 @@ export default function Home() {
         {/* Partners Section */}
         <section className="w-full py-4 bg-gray-600 text-white">
           <div className="container px-4">
-            <div className="mx-auto max-w-3xl flex items-center justify-center gap-6">
-              <span className="text-base md:text-lg font-semibold whitespace-nowrap">We partner with:</span>
+            <div className="mx-auto max-w-3xl flex flex-wrap items-center justify-center gap-3 sm:gap-6">
+              <span className="text-base md:text-lg font-semibold">We partner with:</span>
               <div className="flex items-center gap-6">
                 <Image src="/images/brave1.png" alt="Brave1" width={120} height={40} className="h-8 w-auto object-contain" />
                 <Image src="/images/iron.png" alt="IRON" width={120} height={40} className="h-8 w-auto object-contain" />
@@ -95,7 +95,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="features" className="w-full py-12 md:py-24 lg:py-32 bg-gray-200 dark:bg-gray-900">
+        <section id="features" className="w-full py-12 md:py-24 lg:py-32 bg-gray-200 dark:bg-gray-900 scroll-mt-20 sm:scroll-mt-0">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
@@ -222,7 +222,7 @@ export default function Home() {
         </section>
 
 
-        <section id="about" className="w-full py-12 md:py-24 bg-gray-300 lg:py-32">
+        <section id="about" className="w-full py-12 md:py-24 bg-gray-300 lg:py-32 scroll-mt-20 sm:scroll-mt-0">
           <div className="container px-4 md:px-6">
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12">
               <div className="flex flex-col justify-center space-y-4">
@@ -230,7 +230,7 @@ export default function Home() {
                   <div className="inline-block rounded-lg bg-gray-400 px-3 py-1 text-sm dark:bg-gray-800">
                     How It All Started
                   </div>
-                  <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl whitespace-nowrap">
+                  <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
                     From Battlefield Needs to Breakthrough AI
                   </h2>
                   <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
@@ -353,7 +353,7 @@ export default function Home() {
 
 {/* Our Users Section */}
 
-      <section id="users" className="py-20 bg-white">
+      <section id="users" className="py-20 bg-white scroll-mt-20 sm:scroll-mt-0">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Users</h2>
@@ -440,7 +440,7 @@ export default function Home() {
 
 
 
-        <section id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-blue-500 text-primary-foreground">
+        <section id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-blue-500 text-primary-foreground scroll-mt-20 sm:scroll-mt-0">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">

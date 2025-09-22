@@ -5,6 +5,10 @@ export const metadata: Metadata = {
   title: 'Azaion',
   description: 'Transforming UAV Operations with AI',
   generator: 'NextJS',
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+  },
   icons: {
     icon: [
       {
@@ -29,7 +33,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className="antialiased overflow-x-hidden min-h-screen">{children}</body>
     </html>
   )
 }
