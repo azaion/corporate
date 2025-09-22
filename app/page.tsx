@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div className="flex min-h-screen flex-col bg-gray-400">
       <header className="sticky top-0 z-40 w-full border-b bg-gray-300 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex items-center justify-between h-auto min-h-16 py-2 gap-2 sm:gap-4">
+        <div className="container flex flex-wrap md:flex-nowrap items-center h-auto min-h-16 py-1 md:py-2 gap-1 sm:gap-4">
           <div className="flex gap-6 md:gap-10">
             <Link href="/" className="flex items-center space-x-3">
               <img
@@ -21,19 +21,19 @@ export default function Home() {
               </span>
             </Link>
           </div>
-          <div className="flex flex-1 items-center justify-end space-x-4">
-            <nav className="flex flex-wrap items-center justify-end gap-x-1 gap-y-1">
-              <Link href="/#features" className="px-2 sm:px-3 md:px-4 py-2 text-sm font-medium transition-colors hover:text-primary">
+          <div className="w-full md:w-auto flex items-center justify-end md:justify-end mt-1 md:mt-0 md:ml-auto">
+            <nav className="flex flex-wrap items-center gap-1 sm:gap-2">
+              <Link href="/#features" className="px-2 sm:px-3 md:px-4 py-1 text-sm md:text-xl font-medium transition-colors hover:text-primary">
                 Features
               </Link>
-              <Link href="/#about" className="px-2 sm:px-3 md:px-4 py-2 text-sm font-medium transition-colors hover:text-primary">
+              <Link href="/#about" className="px-2 sm:px-3 md:px-4 py-1 text-sm md:text-xl font-medium transition-colors hover:text-primary">
                 About
               </Link>
-              <Link href="/#users" className="px-2 sm:px-3 md:px-4 py-2 text-sm font-medium transition-colors hover:text-primary">
+              <Link href="/#users" className="px-2 sm:px-3 md:px-4 py-1 text-sm md:text-xl font-medium transition-colors hover:text-primary">
                 Our Users
               </Link>
 
-              <Link href="/#contact" className="px-2 sm:px-3 md:px-4 py-2 text-sm font-medium transition-colors hover:text-primary">
+              <Link href="/#contact" className="px-2 sm:px-3 md:px-4 py-1 text-sm md:text-xl font-medium transition-colors hover:text-primary">
                 Contact
               </Link>
             </nav>
